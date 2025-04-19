@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fade In Pixel Love</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    body {
+      background-color: #ffffff; /* พื้นหลังขาว */
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .message {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 28px;
+      color: #ff69b4; /* สีชมพู */
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 3s ease-out forwards, float 2.5s ease-in-out infinite alternate;
+      text-shadow: 2px 2px #ffe6f0;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(-15px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    I LOVE YOU<br>AND I MISS YOU
+  </div>
+</body>
+</html>
